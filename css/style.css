@@ -206,8 +206,30 @@ h6 {
 
 .header__container {
   max-width: 110rem;
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
+}
+
+@supports (padding-top: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+  .header__container {
+    padding-top: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem );
+  }
+}
+
+@supports not (padding-top: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+  .header__container {
+    padding-top: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55);
+  }
+}
+
+@supports (padding-bottom: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+  .header__container {
+    padding-bottom: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 0.9375rem , 0.5965909091rem  +  1.7045454545vw , 1.875rem )) {
+  .header__container {
+    padding-bottom: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 55);
+  }
 }
 
 .header__body {
@@ -447,10 +469,6 @@ h6 {
   line-height: 1.2857142857;
 }
 
-.main-block {
-  min-height: 80vh;
-}
-
 .main-block__container {
   position: relative;
   max-width: 120rem;
@@ -513,6 +531,18 @@ h6 {
   line-height: 1.25;
   font-weight: 700;
   max-width: 35rem;
+}
+
+@supports (font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem )) {
+  .main-slider__title {
+    font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.875rem , 1.6477272727rem  +  1.1363636364vw , 2.5rem )) {
+  .main-slider__title {
+    font-size: calc(1.875rem + 0.625 * (100vw - 20rem) / 55);
+  }
 }
 
 .main-slider__title:not(:last-child) {
