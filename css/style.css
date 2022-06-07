@@ -833,6 +833,9 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pagination-blog__prev,
@@ -842,6 +845,12 @@ h6 {
 
 .pagination-blog__numbers {
   padding: 0rem 1.875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.625rem;
 }
 
 .pagination-blog__numbers span {
@@ -864,14 +873,10 @@ h6 {
 
 .pagination-blog__num {
   font-size: 1rem;
-  padding: 0.3125rem 0.625rem;
+  padding: 0.375rem 0.625rem;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-.pagination-blog__num:not(:last-child) {
-  margin-right: 0.625rem;
 }
 
 .pagination-blog__num:hover {
@@ -1285,9 +1290,17 @@ h6 {
             flex: 1 1 100%;
   }
 
+  .pagination-blog__body {
+    padding: 0.625rem 0.9375rem;
+  }
+
   .pagination-blog__prev span,
   .pagination-blog__next span {
     display: none;
+  }
+
+  .pagination-blog__numbers {
+    padding: 0rem 0.625rem;
   }
 }
 
